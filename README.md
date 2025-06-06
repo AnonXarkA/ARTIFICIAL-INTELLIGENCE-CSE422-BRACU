@@ -4,6 +4,7 @@
 
 # ✈️ CSE422 - Lab Assignment 01: A* Search Algorithm
 
+Ans: ⚡  <a href="https://github.com/AnonXarkA/ARTIFICIAL-INTELLIGENCE-CSE422-BRACU/tree/main/LAB%201"> LAB 1</a> <br> 
 ---
 
 [![](https://i.ibb.co/7dzhK4KC/Screenshot-82.png)](https://imgbb.com/)
@@ -118,7 +119,7 @@ If there is no path found from the Start node to the End node, simply print:
 NO PATH FOUND
 ```
 
-
+Ans: ⚡  <a href="https://github.com/AnonXarkA/ARTIFICIAL-INTELLIGENCE-CSE422-BRACU/tree/main/LAB%201"> LAB 1</a> <br> 
 
 
 |
@@ -142,6 +143,7 @@ NO PATH FOUND
  
 # Lab Assignment 02: Alpha-Beta Pruning
 
+Ans: ⚡  <a href="https://github.com/AnonXarkA/ARTIFICIAL-INTELLIGENCE-CSE422-BRACU/tree/main/LAB%202"> LAB 2</a> <br> 
 ---
 
 ## 📘 Problem Statement
@@ -234,6 +236,8 @@ Left Life = (60 - 16) = 44
 4. After Alpha-Beta Pruning Leaf Node Comparisons 13
 ```
 
+Ans: ⚡  <a href="https://github.com/AnonXarkA/ARTIFICIAL-INTELLIGENCE-CSE422-BRACU/tree/main/LAB%201"> LAB 2</a> <br> 
+
 |
 
 
@@ -245,8 +249,8 @@ Left Life = (60 - 16) = 44
 
 # Lab Assignment 3
 
-## 🏦 Strange Bank Problem: Genetic Algorithm
-
+# 🏦 Strange Bank Problem: Genetic Algorithm
+Ans: ⚡  <a href="https://github.com/AnonXarkA/ARTIFICIAL-INTELLIGENCE-CSE422-BRACU/tree/main/LAB%203"> LAB 3</a> <br> 
 ---
 
 ## 🧩 Problem Description
@@ -353,4 +357,4 @@ d 9055
 
 -1
 
-
+Ans: ⚡  <a href="https://github.com/AnonXarkA/ARTIFICIAL-INTELLIGENCE-CSE422-BRACU/tree/main/LAB%203"> LAB 3</a> <br> 
