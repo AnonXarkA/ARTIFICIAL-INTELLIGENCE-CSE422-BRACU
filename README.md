@@ -1,6 +1,6 @@
 # ARTIFICIAL-INTELLIGENCE-CSE422-BRACU
 
-
+# 🛡️ EEE472/CSE422 - Artificial Intelligence 
 
 # ✈️ CSE422 - Lab Assignment 01: A* Search Algorithm
 
@@ -117,3 +117,240 @@ If there is no path found from the Start node to the End node, simply print:
 ```
 NO PATH FOUND
 ```
+
+
+
+
+|
+
+
+
+
+
+
+
+|
+
+
+
+
+
+
+
+
+
+ 
+# Lab Assignment 02: Alpha-Beta Pruning
+
+---
+
+## 📘 Problem Statement
+
+Assume that there are two teams and they are team attacker and team defender. Therefore, at a state of the game one agent in each team is left alive respectively. Here, the defender is given a lifeline called **HP** which will be assigned randomly. 
+
+Furthermore:
+
+- The **attacker** agent will try to give **maximum negative HP** to the defender agent to decrease his (defender’s) chances of survival in the game.  
+- The **defender** agent will try to protect himself by receiving the **lowest negative HP** possible from the attacker agent.  
+- The attacker can choose from a number of bullets from his gun.  
+- Each bullet (move) will cost a certain **maximum negative HP**, randomly assigned within a given range (min, max).
+
+---
+
+You need to implement the **Alpha-Beta Pruning algorithm** to determine the optimal damage outcome.
+
+---
+
+## 🧪 Sample Input 1
+
+```
+1. Enter your student id:
+17301106
+
+2. Minimum and Maximum value for the range of negative HP:
+1 30
+```
+
+### Sample Input 1 Explanation
+
+- Ex. 1 (17301106): Use 1st digit of your BRACU student ID  
+  → **Number of turns for the attacker agent**  
+- Ex. 60 (17301106): Use last 2 digits of your student ID in reverse  
+  → **Initial lifeline (HP) for the defender**  
+- Ex. 3 (17301106): Use semester code (3rd digit of your student ID)  
+  → **Number of bullets (branching factor)**  
+- Ex. 1 30: Minimum and maximum range of negative HP values
+
+---
+
+## ✅ Sample Output 1
+
+```
+1. Depth and Branches ratio is 2:3
+2. Terminal States (leaf node values) are 19,22,9,2,26,16,16,27,16.
+3. Left life(HP) of the defender after maximum damage caused by the attacker is 44
+4. After Alpha-Beta Pruning Leaf Node Comparisons 7
+```
+
+---
+
+### Sample Output 1 Explanation
+
+```
+(Application of Alpha-Beta Pruning Algorithm)
+
+MAX   - Level 0 (Attacker’s Turn / Initial Start)       → MAX utility / Best Choice
+MIN   - Level 1 (Defender’s Turn)                       → 3 branches
+LEAVES - Level 2 (Terminal State)                       → 3^2 = 9 leaf nodes
+
+Terminal Node Values: [19, 22, 9, 2, 26, 16, 16, 27, 16]
+
+Left Life = (60 - 16) = 44
+```
+
+> Formula: `Left life HP = Initial life HP - MAX negative HP`  
+> Hint: Terminal nodes are randomly generated values within the given range of negative HP.
+
+---
+
+## 🧪 Sample Input 2
+
+```
+1. Enter your student id:
+20201003
+
+2. Minimum and Maximum value for the range of negative HP:
+5 20
+```
+
+---
+
+## ✅ Sample Output 2
+
+```
+1. Depth and Branches ratio is 4:2
+2. Terminal States(Leaf Nodes) are 18,13,5,12,10,5,13,7,17,8,6,8,5,11,13,18.
+3. Left life(HP) of the defender after maximum damage caused by the attacker is 22
+4. After Alpha-Beta Pruning Leaf Node Comparisons 13
+```
+
+|
+
+
+
+
+|
+
+
+
+# Lab Assignment 3
+
+## 🏦 Strange Bank Problem: Genetic Algorithm
+
+---
+
+## 🧩 Problem Description
+
+Suppose, you are the owner of a bank that operates in a strange way.
+Customers can lend money from your bank (just like a normal bank) and
+they can also deposit money in your bank. A register is maintained to track
+the daily transactions. However, being the strange owner of a strange bank,
+you have a fascination with finding out whether a portion of your daily
+transactions (in/out) balance out to zero.
+
+
+
+---
+
+### 🧾 Example:
+
+
+
+For example, given the following transaction log:
+
+| Transaction ID | Type    | Amount |
+| :------------- | :------ | :----- |
+| 1              | Lend    | 100    |
+| 2              | Deposit | 150    |
+| 3              | Lend    | 400    |
+| 4              | Lend    | 500    |
+| 5              | Deposit | 1000   |
+| 6              | Lend    | 460    |
+| 7              | Deposit | 160    |
+| 8              | Deposit | 200    |
+| 9              | Lend    | 500    |
+| 10             | Deposit | 100    |
+
+In this case, there is a portion of the transactions that would balance itself
+out. (6th, 7th, 8th, and 10th transactions would amount to 0).
+
+---
+## 🤖 Your Task: Use a Genetic Algorithm
+
+### Task Breakdown:
+
+1. **Model** the transaction register in a way suitable for the problem.
+2. Write a **fitness function**.  
+   > Hint: It is the **sum of the non-zero elements** of a register.
+3. Write the **crossover function**.
+4. Write the **mutation function**.
+5. Create a **population** of randomly generated registers.
+6. Run the **genetic algorithm** on the population until:
+   - Highest fitness is reached  
+   **OR**
+   - Maximum iterations have been reached.
+
+---
+
+## 📥 Input
+
+- The **first line** has a number `N` denoting the number of daily transactions.  
+- The following `N` lines each start with:
+  - `l` (for Lend)
+  - `d` (for Deposit)
+  - Followed by an integer `S` denoting the amount of transaction.
+
+**Constraints:**
+
+- `1 ≤ N ≤ 10^2`
+- `1 ≤ S ≤ 10^5`
+
+---
+
+## 📤 Output
+
+The output would be a binary string denoting the specific transactions that
+balance themselves to zero or -1 if such a string cannot be formed. String
+consisting of all zeros won’t be accepted.
+
+
+
+## 🧪 Sample Input 1
+```
+7
+l 120
+l 289
+d 475
+l 195
+d 6482
+l 160
+d 935
+```
+## 🧪 Sample Output 1
+
+1011010
+
+## 🧪 Sample Input 2
+```
+5
+l 100
+l 450
+d 500
+l 7923
+d 9055
+```
+## 🧪 Sample Output 2
+
+-1
+
+
